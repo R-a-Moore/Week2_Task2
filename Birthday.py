@@ -33,14 +33,16 @@ def calculate_age():
     age = Date["year"] - birthdate["year"]
     if Date["month"] <= birthdate["month"] and Date["day"] <= birthdate["day"]:
         age -= 1
-    print("Congratulations, you are", age, "years old!")
+    print("OMG", get_name() + "! you are", age, "years old. So you were born in", str(birthdate["year"]) + "!")
 
+def get_name():
+    name = input("Please enter your name: ").strip()
+    return name
 
 def start(): # begins the program calling other relevant functions
     get_date()
     get_birthday()
     calculate_age()
-
 
 start()
 
